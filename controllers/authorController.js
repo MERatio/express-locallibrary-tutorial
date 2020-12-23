@@ -110,7 +110,7 @@ exports.author_delete_post = function(req, res) {
 			Author.findById(req.body.authorid).exec(callback);
 		},
 		author_books: function(callback) {
-			Book.find({'author': req.body.authoroid}).exec(callback)
+			Book.find({'author': req.body.authorid}).exec(callback)
 		},
 	}, function(err, results) {
 		   if (err) { return next(err); }
